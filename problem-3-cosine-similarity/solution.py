@@ -1,0 +1,1 @@
+def solve(a, b): import numpy as np; a = np.asarray(a, dtype=float); b = np.asarray(b, dtype=float); sa = np.max(np.abs(a)); sb = np.max(np.abs(b)); a = a / sa if sa else a; b = b / sb if sb else b; denom = np.linalg.norm(a) * np.linalg.norm(b); return float(np.clip(np.dot(a,b)/denom, -1, 1)) if denom else 0.0
